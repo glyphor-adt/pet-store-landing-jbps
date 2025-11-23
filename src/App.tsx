@@ -1,31 +1,17 @@
-import React from "react";
-import { cn } from "@/lib/utils";
-import { ThemeProvider } from "@/components/theme-provider";
-import Hero from "@/components/Hero";
-import Features from "@/components/Features";
-import Testimonials from "@/components/Testimonials";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar"; // Assuming you have a Navbar component
+import React from 'react';
 
-interface ApplicationLayoutProps {
-  children?: React.ReactNode; // Optional children for more flexibility
-}
-
-const ApplicationLayout: React.FC<ApplicationLayoutProps> = ({ children }) => {
+export default function App() {
   return (
-    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <div className="min-h-screen bg-background font-sans antialiased">
-        <Navbar /> {/* Render the Navbar here */}
-        <main className="flex-1">
-          <Hero />
-          <Features />
-          <Testimonials />
-          {children} {/* Render any additional content passed as children */}
-        </main>
-        <Footer />
-      </div>
-    </ThemeProvider>
+    <div className="min-h-screen bg-background text-foreground">
+      <main className="container mx-auto px-4">
+        <h1 className="text-4xl font-bold py-16 text-center">
+          Create a landing page. The landing page will be for a pet store.
+        </h1>
+        <p className="text-center text-muted-foreground mb-8">
+          Your AI-generated landing page is ready! Components will be imported below.
+        </p>
+        {/* Generated sections will be imported and rendered here */}
+      </main>
+    </div>
   );
-};
-
-export default ApplicationLayout;
+}
